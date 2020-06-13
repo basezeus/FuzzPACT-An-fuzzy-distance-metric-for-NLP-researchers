@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>FuzzPact</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/landing-page.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="papaparse.min.js"></script>
+
+  <link rel="stylesheet" href="impose.css">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Developed Using Bootstrap</a>
+      <a class="btn btn-primary" href="#">New Tools</a> 
+    </div>
+  </nav>
+  <head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="papaparse.min.js"></script>
+  <title>FuzzPact : Fuzzy Matching </title>
+  
+  <style>
+	.pdfobject-container { height: 500px;}
+	.pdfobject { border: 1px solid #666; }
+  </style>
+</head>
+  
+  <header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h1>FuzzPact: Fuzzy Matching</h1>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+	    <div class="form-row">
+              <div class="col-12 col-md-9 mb-2 mb-md-0">
+              </div>
+              <div class="col-12 col-md-3">	  
+	    </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-screen-desktop m-auto text-primary"></i>
+            </div>
+            <h3>Jaccard Similarity Measure</h3>
+            <p class="lead mb-0">We can use the Jaccard Similarity algorithm to work out the similarity between two things. We might then use the computed similarity as part of a recommendation query. </p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-layers m-auto text-primary"></i>
+            </div>
+            <h3>Levenshtein Similarity Measure</h3>
+            <p class="lead mb-0">Levenshtein Distance (LD) is a measure to quantify how different two stings by counting the number of character edits that turns one string into another.
+</div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-check m-auto text-primary"></i>
+            </div>
+            <h3>Parameter Tuning</h3>
+            <p class="lead mb-0">The users can make their own hybrid distance measure which is a combination of both Jaccard and levenshtein measure to achieve more precision . This uses a layered model based on the user preferences.The</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<body>
+  <div class="container" style="padding:0px 0px;">
+    
+    <h3>Upload the Files</h3>
+	<div id="header"></div>
+	<div class="well">
+		<div class="row">
+		<form class="form-inline">
+			<div class="form-group">
+			  <label for="files">Upload the sentence output File:</label>
+			  <input type="file" id="files1"  class="form-control" accept=".csv" required />
+			</div>
+			<div class="form-group">
+			 <button type="submit" id="submit-file1" class="btn btn-primary">Upload File<br/><br/></button>
+			 </div>
+		</form>
+		</div>
+		<div class="row">
+		<form class="form-inline">
+			<div class="form-group">
+			  <label for="files">Upload  the  word  output File:&nbsp &nbsp &nbsp &nbsp</label>
+			  <input type="file" id="files2"  class="form-control" accept=".csv" required />
+			</div>
+			<div class="form-group">
+			 <button type="submit" id="submit-file2" class="btn btn-primary">Upload File<br/><br/></button>
+			 
+			 </div>
+		</form>
+		</div>
+		<!-- <div class="table" style="overflow-y:scroll;"> -->
+		<div class="row" >
+			
+			<div class="row" id="parsed_csv_list1" >
+			</div>
+		</div>
+    		<br>
+      		<div class="row" >
+      			<div class="row" id="parsed_csv_list2" >
+      		</div>
+    </div>
+	</div>
+	<!-- </div> -->	
+	<!--<div class="row" style="margin:30px 0px 50px 50px;">
+		<a class="btn btn-default read-more" style="background:#3399ff;color:white" href="https://www.js-tutorials.com/javascript-tutorial/reading-csv-file-using-javascript-html5/">Back to Tutorial</a>
+	</div> -->
+	<div id="footer"></div>
+  </div>
+</body>
+<table width="800">
+<script type="text/javascript">
+  $(document).ready(function(){
+	$('#header').load('../header-ads.html');
+    $('#footer').load('../footer-ads.html');
+	
+    $('#submit-file1').on("click",function(e){
+		e.preventDefault();
+
+               
+		$.post("http://localhost:8000/", function(){
+		alert("test data" + test);		 	
+		alert("fghjkl");
+      		alert("Data: " + data + "\nStatus: " + status);
+    	});
+			
+		$('#files1').parse({
+			config: {
+				delimiter: "auto",
+				complete: displayHTMLTable1,
+			},
+			before: function(file, inputElem)
+			{
+				console.log("Parsing file...", file);
+			},
+			error: function(err, file)
+			{
+				console.log("ERROR:", err, file);
+			},
+			complete: function()
+			{
+				console.log("Done with all files");
+			}
+		});
+    });
+	$('#submit-file2').on("click",function(e){
+		e.preventDefault();
+
+
+		 $.post("http://localhost:8000/", function(){
+		 	alert("fghjkl");
+      		alert("Data: " + data + "\nStatus: " + status);
+    	});
+
+		$('#files2').parse({
+			config: {
+				delimiter: "auto",
+				complete: displayHTMLTable2,
+			},
+			before: function(file, inputElem)
+			{
+				console.log("Parsing file...", file);
+			},
+			error: function(err, file)
+			{
+				console.log("ERROR:", err, file);
+			},
+			complete: function()
+			{
+				console.log("Done with all files");
+			}
+		});
+    });
+
+	
+  	function displayHTMLTable1(results){
+  		var table = "<table class='table'>";
+  		var data = results.data;
+  		 
+  		for(i=0;i<data.length;i++){
+  			table+= "<tr>";
+  			var row = data[i];
+  			var cells = row.join(",").split(",");
+  			 
+  			for(j=0;j<cells.length;j++){
+  				table+= "<td>";
+  				table+= cells[j];
+  				table+= "</th>";
+  			}
+  			table+= "</tr>";
+  		}
+  		table+= "</table>";
+  		$("#parsed_csv_list1").html(table);
+
+  		//xmlHttpReq =     new XMLHttpRequest();   
+  		//xmlHttpReq.open('POST', '/button_click',true);    
+  		//xmlHttpReq.send('w=' + encodeURI(arr));
+
+  	}
+
+    function displayHTMLTable2(results){
+      var table = "<table class='table'>";
+      var data = results.data;
+       
+      for(i=0;i<data.length;i++){
+        table+= "<tr>";
+        var row = data[i];
+        var cells = row.join(",").split(",");
+         
+        for(j=0;j<cells.length;j++){
+          table+= "<td>";
+          table+= cells[j];
+          table+= "</th>";
+        }
+        table+= "</tr>";
+      }
+      table+= "</table>";
+      $("#parsed_csv_list2").html(table);
+
+      //xmlHttpReq =     new XMLHttpRequest();   
+      //xmlHttpReq.open('POST', '/button_click',true);    
+      //xmlHttpReq.send('w=' + encodeURI(arr));
+
+    }
+  });
+
+
+
+</script>
+</table>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect('http://localhost');
+  socket.on('news', function (data) {
+    console.log(data);
+    socket.emit('my other event', { my: 'data' });
+  });
+</script>
+
+
+
+  <!-- Image Showcases -->
+  <section class="showcase">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1-min.jpg');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2>Similarity measures works in this way</h2>
+          <p class="lead mb-0">Measuring similarity between words is a very important task within NLP with applications in tasks such  as  word  sense  disambiguation,  information retrieval, and question answering.  However, most of the existing approaches compute similarity onthe word-level instead of the sense-leve</p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2-min.jpg');"></div>
+        <div class="col-lg-6 my-auto showcase-text">
+          <h2>Targeted Audience</h2>
+          <p class="lead mb-0">NLP is a tool that can help move your business forward by providing insight into the minds of your target audience members. However, it is not meant to replace human intuition. In social media environments, NLP helps cut through noise and vast amounts of data to help brands understand audience perception, and therefore, to determine the most strategic response.</p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/images2.jpeg');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2>Easy to Use &amp; Train and Tune</h2>
+          <p class="lead mb-0">Development should benefit from a systematic,structured development,especially in the case of large and complex applications. A sructured approach to tuning suggests the notion of more extensiblity and more degree of freedom    </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials text-center bg-light">
+    <div class="container">
+      <h2 class="mb-5">Our Developers</h2>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpeg" alt="">
+            <h5>Kaushik Ganorkar.</h5>
+            <p class="font-weight-light mb-0">Hello There!</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
+            <h5>A.V.S Bharadwaj</h5>
+            <p class="font-weight-light mb-0">Hello There!</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="img/Anant.jpeg" alt="">
+            <h5>Anant Kumar.</h5>
+            <p class="font-weight-light mb-0">Hello There!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="https://www.cse.iitb.ac.in/">About</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="https://www.cse.iitb.ac.in/">Contact</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="https://www.cse.iitb.ac.in/">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="https://www.cse.iitb.ac.in/">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; cse.iitb.ac.in 2019. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="https://www.facebook.com/">
+                <i class="fab fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/accounts/login/?hl=en">
+                <i class="fab fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
